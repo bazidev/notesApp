@@ -1,3 +1,41 @@
 <app-navbar></app-navbar> 
-<app-side-bar></app-side-bar>
-
+<app-side-bar></app-side-bar> 
+<ul>
+ 
+<div class="note">
+ <mat-accordion>
+        
+        <mat-expansion-panel (opened)="panelOpenState = true"
+                             (closed)="panelOpenState = false">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Note Title
+            </mat-panel-title>
+            <mat-panel-description>
+              
+              Description
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <div class="menu">
+          <button mat-icon-button [matMenuTriggerFor]="menu">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+          </div>
+            <mat-menu #menu="matMenu">
+             
+              <button mat-menu-item>
+                <mat-icon>delete</mat-icon>
+                <span>Delete</span>
+              </button>
+              <button mat-menu-item >
+                <mat-icon>Archive</mat-icon>
+                <span>Archiver</span>
+              </button>
+              <button mat-menu-item>
+                <mat-icon>update</mat-icon>
+                <span>modifier</span>
+              </button>
+            </mat-menu>
+        </mat-expansion-panel>
+      </mat-accordion> 
+    </div>

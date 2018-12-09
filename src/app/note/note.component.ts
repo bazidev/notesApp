@@ -15,10 +15,13 @@ export class NoteComponent implements OnInit {
   creationDate:Date;
   deleteDate:Date;
   user:UserComponent;
-
+  number : number;
   constructor() { }
 
   ngOnInit() {
   }
-
+  
+}
+export class ExpansionOverviewExample {
+  panelOpenState = false;
 }

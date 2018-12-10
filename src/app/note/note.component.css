@@ -1,11 +1,7 @@
 .note{
-    padding-right: 80px;
+    padding-right: 300px;
+    padding-left: 300px;
 }
 .menu{
-    padding-left: 900px;
+    padding-left: 650px;
 }
-.example-card {
-    max-width: 40%;
-    margin-left: auto;
-    margin-right: auto;
-  }

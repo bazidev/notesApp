@@ -1,59 +1,31 @@
 <app-navbar></app-navbar> 
 <app-side-bar></app-side-bar> 
-<ul>
- <button (click)="logout()" >logout</button>
+
+
 <div class="note">
-
-
-    <mat-card class="example-card">
+     <mat-accordion >
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Creer une note
+            </mat-panel-title>
+            <mat-panel-description>
+              Titre de la note
+            </mat-panel-description>
+          </mat-expansion-panel-header>
       
-    <mat-card-header>
-        <div mat-card-avatar class="example-header-image"></div>
-        <mat-card-title>Note Title</mat-card-title> 
-      </mat-card-header>
-        <img mat-card-image src="https://www.gstatic.com/webp/gallery/1.jpg" alt="Photo of a Shiba Inu">
-        <mat-card-content>
-          <p>
-            The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-            A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-            bred for hunting.
-            Body
-          </p>
-        </mat-card-content>
-        <mat-card-actions>
-          <button mat-button>
-              <i class="material-icons md-24">edit</i>
-             Edit</button>
-          <button mat-button>
-              <i class="material-icons md-24">archive</i>
-              Archive</button>
-          <button mat-button>
-              <i class="material-icons md-24">delete</i>
-              Delete</button>
-
-                  <button mat-icon-button [matMenuTriggerFor]="menu">
-                      <mat-icon>more_vert</mat-icon>
-                      label
-                    </button>
-            
-                    <mat-menu #menu="matMenu">
-                     
-                      <button mat-menu-item>
-                        <span>Arabic</span>
-                      </button>
-                      <button mat-menu-item >
-                        <span>French</span>
-                      </button>
-                      <button mat-menu-item>
-                        <span>Spanish</span>
-                      </button>
-                    </mat-menu>
-        </mat-card-actions>
-      </mat-card>
-      
-
+          <mat-form-field>
+            <input matInput placeholder="Titre">
+          </mat-form-field>
+          <div class="example-button-row">
+              <button mat-icon-button>
+                <mat-icon svgIcon="folder"></mat-icon>
+              </button>
+          </div>
+         </mat-expansion-panel>
+</mat-accordion>
  <mat-accordion>
-        
+         <br>  
         <mat-expansion-panel (opened)="panelOpenState = true"
                              (closed)="panelOpenState = false">
           <mat-expansion-panel-header>

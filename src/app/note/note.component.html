@@ -1,10 +1,31 @@
 <app-navbar></app-navbar> 
 <app-side-bar></app-side-bar> 
-<ul>
- 
+
+
 <div class="note">
+     <mat-accordion >
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Creer une note
+            </mat-panel-title>
+            <mat-panel-description>
+              Titre de la note
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+      
+          <mat-form-field>
+            <input matInput placeholder="Titre">
+          </mat-form-field>
+          <div class="example-button-row">
+              <button mat-icon-button>
+                <mat-icon svgIcon="folder"></mat-icon>
+              </button>
+          </div>
+         </mat-expansion-panel>
+</mat-accordion>
  <mat-accordion>
-        
+         <br>  
         <mat-expansion-panel (opened)="panelOpenState = true"
                              (closed)="panelOpenState = false">
           <mat-expansion-panel-header>

@@ -1,4 +1,4 @@
-<nav class="hidden-xs-down bg-faded sidebar">
+<!-- <nav class="hidden-xs-down bg-faded sidebar">
   <ul class="nav nav-pills flex-column">
     <li class="nav-item">
       <a class="nav-link" routerLink="/dashboard" routerLinkActive="active">Active Notes</a>
@@ -17,4 +17,47 @@
       </li>
   </ul>
 
-</nav>
+</nav> -->
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+
+<div class="row affix-row">
+    <div class="col-sm-3 col-md-2 affix-sidebar">
+		<div class="sidebar-nav">
+  <div class="navbar navbar-default" role="navigation">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-navbar-collapse">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      </button>
+      <span class="visible-xs navbar-brand">Sidebar menu</span>
+    </div>
+    <div class="navbar-collapse collapse sidebar-navbar-collapse">
+      <ul class="nav navbar-nav" id="sidenav01">
+        <li class="active">
+          <a data-toggle="collapse" data-target="#toggleDemo0" data-parent="#sidenav01" class="collapsed">
+          <h4>
+          Bienvenu Username
+       </h4>
+          </a>
+                 </li>
+                 <br>
+                 <br>
+        <li><a [routerLink]="['/note']" ><span class="glyphicon glyphicon-tags"></span> Note</a></li><br>
+        <li><a [routerLink]="['/login']"><span class="glyphicon glyphicon-download-alt"></span> Archive <span class="badge pull-right"></span></a></li><br>
+        <li><a [routerLink]="['/login']"><span class="glyphicon glyphicon-time"></span> Rappels</a></li><br>
+        <li><a [routerLink]="['/login']"><span class="glyphicon glyphicon-trash"></span> Corbeille</a></li><br>
+        <li><a [routerLink]="['/login']"><span class="glyphicon glyphicon-log-out"></span> Déconnexion</a></li><br>
+        <li></li>
+        <li></li>
+      </ul>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+  

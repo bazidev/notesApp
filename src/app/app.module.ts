@@ -14,6 +14,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatExpansionModule} from '@angular/material/expansion';
 
 import { MatFormFieldModule,  MatToolbarModule, MatCheckboxModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MatCardModule, MatInputModule } from '@angular/material';
+import { UserService } from './user/user.service';
+import { HttpClientModule } from '@angular/common/http';
+import { TokenStorage } from './user/token.storage';
 
 @NgModule({
   declarations: [
@@ -27,6 +30,7 @@ import { MatFormFieldModule,  MatToolbarModule, MatCheckboxModule, MatButtonModu
    ],
 
    imports: [
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule, 
@@ -38,7 +42,8 @@ import { MatFormFieldModule,  MatToolbarModule, MatCheckboxModule, MatButtonModu
     MatExpansionModule,
     MatInputModule,
     MatFormFieldModule,
-    MatMenuModule
+    MatMenuModule,
+    MatCardModule
   ],
   exports: [
     MatExpansionModule,
@@ -52,7 +57,7 @@ import { MatFormFieldModule,  MatToolbarModule, MatCheckboxModule, MatButtonModu
     MatListModule,
     MatCardModule, MatIconModule
   ],
-  providers: [],
+  providers: [UserService,TokenStorage],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

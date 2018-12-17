@@ -1,13 +1,8 @@
-/* make sidebar nav vertical */ 
-@media (min-width: 768px){
- 
 
  
 
   .sidebar-nav{
         position:fixed; 
-        width:20%;
-        margin-top: -20px;
   }
  
   .sidebar-nav .navbar .navbar-collapse {
@@ -27,28 +22,4 @@
     float: none;
     display: block;
   }
-  .sidebar-nav .navbar li a {
-    padding-top: 12px;
-    padding-bottom: 12px;
-  }  
-}
 
-
-
-@media (min-width: 1220px){
-
-
-  .navbar-nav {
-    margin: 0;
-  }
-  .navbar-collapse{
-    padding: 0;
-  }
-  .sidebar-nav .navbar li a:hover {
-    background-color: #428bca;
-    color: white;
-  }
-  .sidebar-nav .navbar li a > .caret {
-    margin-top: 8px;
-  }  
-}

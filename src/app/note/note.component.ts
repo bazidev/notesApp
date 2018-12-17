@@ -1,7 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { UserComponent } from '../user/user.component';
-import { TokenStorage } from '../user/token.storage';
-import { Router } from '@angular/router';
+import { Component, OnInit, Input } from '@angular/core';
+import { stringify } from '@angular/core/src/util';
+import { NotesService } from '../notes/notes.service';
 
 @Component({
   selector: 'app-note',
@@ -9,32 +8,29 @@ import { Router } from '@angular/router';
   styleUrls: ['./note.component.css']
 })
 export class NoteComponent implements OnInit {
-
-  idNote:number;
-  title:string;
-  body:string;
-  updateDate:Date;
-  creationDate:Date;
-  deleteDate:Date;
-  user:UserComponent;
-  number : number;
-  constructor(private token:TokenStorage,private router:Router) { }
+  
+  @Input() id: number;
+  @Input() title : string;
+  @Input() body : string;
+  
+  constructor(private noteService:NotesService) { 
+    
+  }
 
   ngOnInit() {
-    if(this.token.getToken() == null )
-    {
-      this.router.navigate(['login']);
-    }
+
   }
 
-  logout(){
-    this.token.signOut();
-    this.router.navigate(['login']);
+  archive(){
+    this.noteService.archive(this.id,true).subscribe((res)=>{
+      console.log(res);
+    });
+  }
+  delete(){
+    this.noteService.delete(this.id,true).subscribe((res)=>{
+      console.log(res);
+    });
+
   }
   
-}
-
-
-export class ExpansionOverviewExample {
-  panelOpenState = false;
 }

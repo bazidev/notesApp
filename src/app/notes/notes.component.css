@@ -1,0 +1,54 @@
+.note{
+    padding-top: 30px;
+    padding-right: 500px;
+    padding-left: 500px;
+}
+.menu{
+    padding-left: 650px;
+}
+
+
+/*navbar*/
+.example-icon {
+    padding: 0 14px;
+  }
+  
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+
+
+/*sidebar*/
+.example-container {
+    position: absolute;
+    top: 60px;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+  }
+  
+  .example-sidenav {
+    display: flex;
+    overflow-x: hidden;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    background-color: #f8f8f8;
+    
+  }
+  
+  .example-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  
+  .example-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  

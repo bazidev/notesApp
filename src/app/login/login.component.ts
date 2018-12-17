@@ -15,7 +15,7 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
     if(this.token.getToken() != null )
     {
-      this.router.navigate(['note']);
+      this.router.navigate(['notes']);
     }
   }
 
@@ -27,7 +27,8 @@ export class LoginComponent implements OnInit {
       {
         console.log("login success");
         this.token.saveToken(data['id']);
-        this.router.navigate(['note']);
+        this.token.saveUsername(data['username']);
+        this.router.navigate(['notes']);
       }
       else {
         console.log("login failed");

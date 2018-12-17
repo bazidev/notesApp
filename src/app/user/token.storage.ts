@@ -21,4 +21,12 @@ export class TokenStorage {
   public getToken(): string {
     return localStorage.getItem(TOKEN_KEY);
   }
+
+  public saveUsername(user:string){
+    window.localStorage.setItem('user',user);
+  }
+
+  public getUsername():string{
+    return window.localStorage.getItem('user');
+  }
 }

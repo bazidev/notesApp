@@ -1,7 +1,11 @@
 .note{
     padding-right: 300px;
     padding-left: 300px;
+    
 }
 .menu{
     padding-left: 650px;
 }
+.example-button-row{
+    padding-left: 550px;
+} 

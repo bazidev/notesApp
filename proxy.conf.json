@@ -1,0 +1,9 @@
+{
+	"/uploadFile": {
+	  "target": "http://localhost:8091",
+	  "secure": false,
+	  "pathRewrite": {
+		"^/uploadFile": ""
+	  }
+	}
+  }
